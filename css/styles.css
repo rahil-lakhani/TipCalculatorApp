@@ -1,0 +1,396 @@
+/****** Default & General Styling ******/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(186, 14%, 43%);
+    display: flex;
+    font-family: 'Space Mono', monospace;
+    font-size: 32px;
+    font-weight: 400;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1rem;
+}
+
+a {
+    color: transparent;
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    background: transparent;
+    border: none;
+    color: hsl(183, 100%, 15%);
+    cursor: inherit;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.45rem;
+    font-weight: 700;
+    outline: none;
+    text-align: right;
+    width: 250px;
+}
+
+::placeholder {
+    color: #9EBBBD;
+}
+
+/*** Wrapper & Main ***/
+
+.wrapper {
+    min-width: 375px;
+    max-width: 375px;
+    background-color: hsl(185, 41%, 84%);
+}
+
+main {
+    margin-bottom: 30px;
+}
+
+/** Main Logo **/
+
+.logoContainer {
+    width: 130px;
+    margin: 0 auto;
+}
+
+.logo {
+    padding: 45px 0 30px;
+}
+
+/** Tip Calculator Main **/
+
+.tipCalculator {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 25px 25px 0 0;
+    padding: 30px;
+    text-align: left;
+}
+
+/* Tip Calculator Control */
+
+.billAmount,
+.numberOfPeople {
+    align-items: center;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: space-between;
+    margin: 6px 0;
+    padding: 6px 20px;
+    transition: box-shadow 0.4s;
+}
+
+.billAmount:hover,
+.billAmount:focus-within,
+.numberOfPeople:hover,
+.numberOfPeople:focus-within {
+    box-shadow: inset 0px 0px 0px 2px hsl(172deg 67% 45%);
+}
+
+.billAmount input,
+.numberOfPeople input {
+    width: 200px;
+}
+
+.selectTipContainer {
+    margin: 30px 0 15px;
+}
+
+.selectTipSubContainer {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+button {
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 0px hsl(183deg 100% 15%);
+    color: hsl(189, 41%, 97%);
+    cursor: pointer;
+    height: 47px;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.45rem;
+    font-weight: 700;
+    outline: none;
+    transition: all 0.3s;
+    width: 150px;
+}
+
+.selectTipSubContainer button:hover {
+    background-color: hsl(185, 65%, 80%);
+    box-shadow: 0 0 1px 0px hsl(185, 65%, 80%);
+    color: hsl(183, 100%, 15%);
+}
+
+.selectTipSubContainer button:focus {
+    background-color: hsl(172, 67%, 45%);
+    box-shadow: 0 0 1px 0px hsl(185, 65%, 80%);
+    color: hsl(183, 100%, 15%);
+    transition: all 0.3s;
+}
+
+.selectTipSubContainer input {
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 5px;
+    cursor: pointer;
+    height: 47px;
+    padding: 0 18px 0 0;
+    transition: box-shadow 0.4s;
+    width: 150px;
+}
+
+.selectTipSubContainer input:hover,
+.selectTipSubContainer input:focus-within {
+    box-shadow: inset 0px 0px 0px 2px hsl(172deg 67% 45%);
+}
+
+.selectTipSubContainer input::placeholder {
+    color: hsl(186, 14%, 43%);
+}
+
+.numberOfPeopleInError {
+    box-shadow: inset 0px 0px 0px 2px #dc3545;
+}
+
+.numberOfPeopleTitle {
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.numberOfPeopleTitle p {
+    color: #dc3545;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-align: right;
+    visibility: hidden;
+}
+
+/* Tip Calculator Display */
+
+.tipCalculatorDisplay {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    box-shadow: 0 0 1px 0px hsl(183deg 100% 15%);
+    color: hsl(172, 67%, 45%);
+    margin: 30px -5px 0;
+    padding: 35px 25px;
+}
+
+.tipAmountPerPersonContainer,
+.totalPerPersonContainer {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.totalPerPersonContainer {
+    margin: 15px 0 30px;
+}
+
+.tipCalculatorDisplay h2 {
+    color: hsl(189, 41%, 97%);
+    font-size: 0.95rem;
+    line-height: 1.3;
+}
+
+.tipCalculatorDisplay span {
+    color: hsl(184, 14%, 56%);
+    font-size: 0.80rem;
+}
+
+.tipCalculatorDisplay h1 {
+    font-size: 2rem;
+    min-width: 150px;
+    max-width: fit-content;
+    text-align: right;
+    overflow: hidden;
+}
+
+.tipCalculatorDisplay button {
+    align-items: center;
+    background-color: hsl(172, 67%, 45%);
+    box-shadow: 0 0 1px 0px hsl(172deg 67% 45%);
+    color: hsl(183, 100%, 15%);
+    font-size: 1.28rem;
+    justify-content: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.tipCalculatorDisplay button:hover {
+    background-color: hsl(185, 65%, 80%);
+    box-shadow: 0 0 1px 0px hsl(185, 65%, 80%);
+    color: hsl(183, 100%, 15%);
+}
+
+/*** Attribution ***/
+
+.attribution {
+    color: hsl(186, 14%, 43%);
+    font-size: 11px;
+    padding: 1px 0;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+@media (min-width:960px) {
+
+    /****** Default & General Styling ******/
+
+    body {
+        background-color: hsl(185, 41%, 84%);
+        min-height: 100vh;
+        min-width: 100vh;
+    }
+
+    /*** Wrapper & Main ***/
+
+    .wrapper {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        height: 100vh;
+        justify-content: center;
+        max-width: 100%;
+        min-width: 100%;
+        padding: 20px;
+        position: relative;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: 660px;
+        justify-content: space-around;
+        margin-bottom: 20px;
+        min-height: 560px;
+        overflow: hidden;
+    }
+
+    /** Main Logo **/
+
+    .logo {
+        padding: 0;
+    }
+
+    /** Tip Calculator Main **/
+
+    .tipCalculator {
+        border-radius: 25px;
+        display: flex;
+        height: 470px;
+        overflow: hidden;
+        padding: 32px;
+        width: 900px;
+    }
+
+    /* Tip Calculator Control */
+
+    .tipCalculatorControls {
+        flex: 50%;
+        padding: 15px 15px;
+    }
+
+    .selectTipContainer {
+        margin: 40px 0 20px;
+    }
+
+    .selectTipSubContainer {
+        gap: 13px;
+    }
+
+    button {
+        margin-bottom: 2px;        
+        width: 115px;
+    }
+
+    .selectTipSubContainer input {
+        padding: 0;
+        text-align: center;        
+        width: 115px;
+    }
+
+    .numberOfPeopleTitle p {
+        font-size: 1rem;
+    }
+
+    /* Tip Calculator Display */
+
+    .tipCalculatorDisplay {
+        flex: 50%;
+        margin: 0 0 0 30px;
+        padding: 50px 40px;
+    }
+
+    .totalPerPersonContainer {
+        margin: 25px 0 112px;
+    }
+
+    .tipCalculatorDisplay h2 {
+        line-height: 1.4;
+    }
+
+    .tipCalculatorDisplay span {
+        color: hsl(184, 14%, 56%);
+        font-size: 0.80rem;
+    }
+
+    .tipCalculatorDisplay h1 {
+        font-size: 2.80rem;
+        min-width: 200px;
+    }
+
+    .tipCalculatorDisplay button {
+        align-items: center;
+        background-color: hsl(172, 67%, 45%);
+        box-shadow: 0 0 1px 0px hsl(172deg 67% 45%);
+        color: hsl(183, 100%, 15%);
+        font-size: 1.3rem;
+        justify-content: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .tipCalculatorDisplay button:hover {
+        background-color: hsl(185, 65%, 80%);
+        box-shadow: 0 0 1px 0px hsl(185, 65%, 80%);
+        color: hsl(183, 100%, 15%);
+    }
+
+    /*** Attribution ***/
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
+    }
+
+}

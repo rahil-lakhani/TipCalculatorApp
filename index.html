@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!--Icon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <!--Styling-->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <main>
+
+            <a class="logoContainer" href="./index.html">
+                <img src="./images/logo.svg" alt="Logo" class="logo">
+            </a>
+
+            <section class="tipCalculator">
+
+                <!--Tip Calculator Controls-->
+
+                <div class="tipCalculatorControls">
+
+                    <div>
+                        <h1>Bill</h1>
+                        <div class="billAmount flex">
+                            <img src="./images/icon-dollar.svg" alt="Dollar Icon">
+                            <input class="billAmountValue" type="number" placeholder="0" required autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="selectTipContainer">
+                        <h1>Select Tip %</h1>
+                        <div class="selectTipSubContainer flex">
+                            <button class="tipPercentage" type="button">5%</button>
+                            <button class="tipPercentage" type="button">10%</button>
+                            <button class="tipPercentage" type="button">15%</button>
+                            <button class="tipPercentage" type="button">25%</button>
+                            <button class="tipPercentage" type="button">50%</button>
+                            <input class="customTipPercentage" type="number" placeholder="Custom">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="numberOfPeopleTitle flex">
+                            <h1>Number of People</h1>
+                            <p>Can't be zero</p>
+                        </div>
+                        <div class="numberOfPeople flex">
+                            <img src="./images/icon-person.svg" alt="Person Icon">
+                            <input class="numberOfPeopleValue" type="number"  placeholder="0" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Tip Calculator Display-->
+
+                <div class="tipCalculatorDisplay">
+
+                    <div>
+                        <div class="tipAmountPerPersonContainer flex">
+                            <h2>
+                                Tip Amount <br>
+                                <span>/ person</span>
+                            </h2>
+                            <h1 class="tipAmountPerPerson">
+                                $0.00
+                            </h1>
+                        </div>
+                        <div class="totalPerPersonContainer flex">
+                            <h2>
+                                Total <br>
+                                <span>/ person</span>
+                            </h2>
+                            <h1 class="totalPerPerson">
+                                $0.00
+                            </h1>
+                        </div>
+                    </div>
+
+                    <button class="resetButton flex" type="reset"> Reset </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://github.com/rahil-lakhani" target="_blank">
+                <strong><em>Rahil Lakhani</em></strong>.
+            </a>
+        </div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
